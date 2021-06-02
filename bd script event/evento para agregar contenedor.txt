@@ -1,0 +1,162 @@
+SET GLOBAL event_scheduler = ON;
+
+CREATE EVENT addContenedor1
+  ON SCHEDULE
+    EVERY 1 MINUTE
+    STARTS '2020-04-03 17:49:00' ON COMPLETION PRESERVE ENABLE 
+  DO
+    UPDATE smart_trash.bindata SET temp=temp+4, humid=humid+7, lvl=lvl+6;
+
+CREATE EVENT addContenedor2
+  ON SCHEDULE
+    EVERY 1 MINUTE
+    STARTS '2020-04-03 17:49:20' ON COMPLETION PRESERVE ENABLE 
+  DO
+    UPDATE smart_trash.bindata SET temp=temp-3, humid=humid-5, lvl=lvl-2;
+
+
+CREATE EVENT addFuego1
+  ON SCHEDULE
+    EVERY 1 MINUTE
+    STARTS '2020-04-03 17:49:00' ON COMPLETION PRESERVE ENABLE 
+  DO
+    UPDATE smart_trash.firedata SET fire= 1;
+
+CREATE EVENT addFuego2
+  ON SCHEDULE
+    EVERY 1 MINUTE
+    STARTS '2020-04-03 17:49:20' ON COMPLETION PRESERVE ENABLE 
+  DO
+    UPDATE smart_trash.firedata SET fire= 2;
+
+CREATE EVENT addFuego3
+  ON SCHEDULE
+    EVERY 1 MINUTE
+    STARTS '2020-04-03 17:49:35' ON COMPLETION PRESERVE ENABLE 
+  DO
+    UPDATE smart_trash.firedata SET fire= 3;
+
+CREATE EVENT addFuego4
+  ON SCHEDULE
+    EVERY 1 MINUTE
+    STARTS '2020-04-03 17:49:35' ON COMPLETION PRESERVE ENABLE 
+  DO
+    UPDATE smart_trash.firedata SET fire= 2;
+
+------------------------------------------------------------------------------
+
+SET GLOBAL event_scheduler = ON;
+
+CREATE EVENT Contenedor1
+  ON SCHEDULE
+    EVERY 1 MINUTE
+    STARTS '2021-05-30 17:23:00' ON COMPLETION PRESERVE ENABLE 
+  DO
+    UPDATE smart_trash.bindata SET temp=temp+3, humid=humid-2, lvl=lvl;
+    UPDATE smart_trash.firedata SET fire= 1;
+
+CREATE EVENT Contenedor2
+  ON SCHEDULE
+    EVERY 1 MINUTE
+    STARTS '2021-05-30 17:23:00' ON COMPLETION PRESERVE ENABLE 
+  DO
+    UPDATE smart_trash.bindata2 SET temp=temp+2, humid=humid+2, lvl=lvl+3;
+    UPDATE smart_trash.firedata2 SET fire= 3;
+
+CREATE EVENT Contenedor3
+  ON SCHEDULE
+    EVERY 1 MINUTE
+    STARTS '2021-05-30 17:23:00' ON COMPLETION PRESERVE ENABLE 
+  DO
+    UPDATE smart_trash.bindata3 SET temp=temp+2, humid=humid-2, lvl=lvl;
+    UPDATE smart_trash.firedata3 SET fire= 2;
+
+
+CREATE EVENT Contenedor1_10seg
+  ON SCHEDULE
+    EVERY 1 MINUTE
+    STARTS '2021-05-30 17:23:10' ON COMPLETION PRESERVE ENABLE 
+  DO
+    UPDATE smart_trash.bindata SET temp=temp+1, humid=humid-1, lvl=lvl;
+    UPDATE smart_trash.firedata SET fire= 1;
+
+CREATE EVENT Contenedor1_15seg
+  ON SCHEDULE
+    EVERY 1 MINUTE
+    STARTS '2021-05-30 17:23:15' ON COMPLETION PRESERVE ENABLE 
+  DO
+    UPDATE smart_trash.bindata SET temp=temp+1, humid=humid-1, lvl=lvl;
+    UPDATE smart_trash.firedata SET fire= 1;
+
+CREATE EVENT Contenedor1_20seg
+  ON SCHEDULE
+    EVERY 1 MINUTE
+    STARTS '2021-05-30 17:23:20' ON COMPLETION PRESERVE ENABLE 
+  DO
+    UPDATE smart_trash.bindata SET temp=temp+1, humid=humid-1, lvl=lvl;
+    UPDATE smart_trash.firedata SET fire= 1;
+
+CREATE EVENT Contenedor1_25seg
+  ON SCHEDULE
+    EVERY 1 MINUTE
+    STARTS '2021-05-30 17:23:25' ON COMPLETION PRESERVE ENABLE 
+  DO
+    UPDATE smart_trash.bindata SET temp=temp+1, humid=humid-1, lvl=lvl;
+    UPDATE smart_trash.firedata SET fire= 1;
+
+CREATE EVENT Contenedor2_30seg
+  ON SCHEDULE
+    EVERY 1 MINUTE
+    STARTS '2021-05-30 17:23:30' ON COMPLETION PRESERVE ENABLE 
+  DO
+    UPDATE smart_trash.bindata2 SET temp=temp+1, humid=humid+2, lvl=lvl+3;
+    UPDATE smart_trash.firedata2 SET fire= 3;
+
+CREATE EVENT Contenedor2_35seg
+  ON SCHEDULE
+    EVERY 1 MINUTE
+    STARTS '2021-05-30 17:23:35' ON COMPLETION PRESERVE ENABLE 
+  DO
+    UPDATE smart_trash.bindata2 SET temp=temp+1, humid=humid+2, lvl=lvl+3;
+    UPDATE smart_trash.firedata2 SET fire= 3;
+
+CREATE EVENT Contenedor2_40seg
+  ON SCHEDULE
+    EVERY 1 MINUTE
+    STARTS '2021-05-30 17:23:40' ON COMPLETION PRESERVE ENABLE 
+  DO
+    UPDATE smart_trash.bindata2 SET temp=temp+1, humid=humid+2, lvl=lvl+3;
+    UPDATE smart_trash.firedata2 SET fire= 3;
+
+CREATE EVENT Contenedor2_45seg
+  ON SCHEDULE
+    EVERY 1 MINUTE
+    STARTS '2021-05-30 17:23:45' ON COMPLETION PRESERVE ENABLE 
+  DO
+    UPDATE smart_trash.bindata2 SET temp=temp+1, humid=humid+2, lvl=lvl+3;
+    UPDATE smart_trash.firedata2 SET fire= 3;
+
+CREATE EVENT Contenedor3_50seg
+  ON SCHEDULE
+    EVERY 1 MINUTE
+    STARTS '2021-05-30 17:23:50' ON COMPLETION PRESERVE ENABLE 
+  DO
+    UPDATE smart_trash.bindata3 SET temp=temp+1, humid=humid+2, lvl=lvl+3;
+    UPDATE smart_trash.firedata3 SET fire= 2;
+
+CREATE EVENT Contenedor3_55seg
+  ON SCHEDULE
+    EVERY 1 MINUTE
+    STARTS '2021-05-30 17:23:55' ON COMPLETION PRESERVE ENABLE 
+  DO
+    UPDATE smart_trash.bindata3 SET temp=temp+1, humid=humid+2, lvl=lvl+3;
+    UPDATE smart_trash.firedata3 SET fire= 2;
+
+CREATE EVENT Contenedor3_00seg
+  ON SCHEDULE
+    EVERY 1 MINUTE
+    STARTS '2021-05-30 17:23:00' ON COMPLETION PRESERVE ENABLE 
+  DO
+    UPDATE smart_trash.bindata3 SET temp=temp+1, humid=humid+2, lvl=lvl+3;
+    UPDATE smart_trash.firedata3 SET fire= 2;
+
